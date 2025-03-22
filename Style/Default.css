@@ -15,7 +15,10 @@ p{
   display: none;
 }
 body{
-  background-color: #5c5f6b;
+  max-width: 100vw;
+  /* width: 100vw; */
+  overflow-x: hidden;
+  background-color: #24262c;
   -ms-overflow-style: none;  
   scrollbar-width: none;  
 }

@@ -1,26 +1,27 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 .Contact{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 1rem;
-  border-radius: 4px;
+  border-radius: 8px;
   border: solid black 1px; 
   align-items: center;
   padding: 2rem 2rem 2rem 2rem;
-  background-color: #6d717d;
+  background-color: #353842;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  
+  z-index: 1;
 }
 .Contact_page{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   padding: 1rem 1rem 1rem 1rem ;
 }
-
 .Contact input{
   border-radius: 5px;
   width: 15rem;
@@ -28,7 +29,7 @@
   text-align: center;     
   font-size: 20px;        
   height: 3rem;
-  background-color: #6d717d;
+  background-color: #474a54;
   border: solid black 1px; 
 }
 .Contact textarea{
@@ -38,7 +39,7 @@
   font-size: 20px; 
   width: 31rem;
   height: 6rem;
-  background-color: #6d717d;
+  background-color: #474a54;
   border: solid black 1px; 
 }
 .Contact input::placeholder,
@@ -57,7 +58,7 @@ textarea::placeholder {
   border-radius: 1rem;
   box-shadow: 0  0 20px 10px rgba(33, 220, 4, 1);
   transition: 0.2s ease;
-  background-color: #8d91a2;
+  background-color: #474a54;
 }
 
 .Contact button:hover{
