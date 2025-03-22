@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Poiret One", sans-serif;
+  font-style: normal;
+  color: #edf0f1;
+}
+body{
+  background-color: #8d91a2;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+p{
+  font-size: 24px;
+}
+h1{
+  font-weight: 800;
+}
+h2{
+  font-size: 36px;
+  font-weight: bold;
+}
+h3{
+  font-size: 32px;
+  font-weight: 800 ;
+}
+hr{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 90vw;
+    margin-top: 1%;
+    border-color: rgb(255, 228, 180);
+}
+a {
+  flex-shrink: 0;
+  transition: 0.2s ease;
+  border-radius: 2%;
+  color: rgb(185, 219, 208);
+  text-decoration: none;
+  box-shadow: 0 5px 10px rgba(185, 219, 208,0.5);
+}
+a:hover{
+  color: aqua;
+  transform: scale(1.2);
+  font-size: 28px;
+  box-shadow: 0 10px 20px rgba(167, 214, 199, 1);
+}

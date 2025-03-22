@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+#Projects{
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
+  align-items: center;
+  padding: 20px 5rem 5rem 5rem ;
+  gap: 20px;
+}
+#Project_rant{
+  padding: 20px;
+}
+.inside_projects {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 20px;            
+  border-radius: 8px;       
+  transition: 0.5s cubic-bezier(.57,.4,0,1.65);
+  background-color: #8d91a2;
+}
+
+.inside_projects:hover {
+  background-color: #9fa3b7;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  
+  transform: scale(1.05,1.05) ;
+
+}
+
+#About{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0 10px 0 ;
+  gap: 10px;
+
+}
+.Philosiphy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px ;
+  gap: 10px;
+
+}
+.inside_projects{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px ;
+  gap: 10px;
+  border: solid #101115 0.1px;
+}
+.inside_projects h3{
+  text-align: left;
+  padding-left: 5px;
+
+}.inside_projects p{
+  text-align: left;
+  padding-left: 5px;
+
+}.inside_projects a{
+  text-align: center;
+  padding-left: 5px;
+}
+#glowies{
+ font-weight:700 ;
+  box-shadow: 0  10px 20px rgba(33, 220, 4, 1);
+  transition: 10s ease;
+
+}
+#glowies:hover{
+  box-shadow: 0  0 200px 300px rgba(33, 220, 4, 1);
+  color: #07f757;
+}
