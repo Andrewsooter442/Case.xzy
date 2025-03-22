@@ -7,10 +7,20 @@
   font-style: normal;
   color: #edf0f1;
 }
+p{
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
 body{
-  background-color: #8d91a2;
+  background-color: #5c5f6b;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
 }
 html {
+
     scroll-behavior: smooth;
 }
 
@@ -39,6 +49,7 @@ a {
   flex-shrink: 0;
   transition: 0.2s ease;
   border-radius: 2%;
+  padding: 1px;
   color: rgb(185, 219, 208);
   text-decoration: none;
   box-shadow: 0 5px 10px rgba(185, 219, 208,0.5);

@@ -38,7 +38,7 @@
     <div class=icons id="top_icons">
       <a href="https://www.youtube.com/@andrewsooter3745"><i class="fa-brands fa-youtube"></i></a>
       <a href="https://github.com/Andrewsooter442"><i class="fa-brands fa-github"></i></a>
-      <a href="andrewsooter121@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="mailto:andrewsooter121@gmail.com"><i class="fa-solid fa-envelope"></i></a>
       <a href="https://www.linkedin.com/in/shashank-p906/"><i class="fa-brands fa-linkedin"></i></a>
     </div>
   </div>
@@ -52,10 +52,8 @@
       <p>I like computers and I also like to wonder in quiet and beautiful places, I like to climb tall towers and
         building. 
         <!-- Also if you think that the colors of this website are ugly it's stylistic choice and people like this kind of stuff -->
-
       </p>
     </div>
-
     <hr>
 
     <!-- Projects Section -->
@@ -92,7 +90,7 @@
         <h3>Prey-Predator Simulation</h3>
         <p>
           I made this project as part of WOC organised by <a href="https://sdslabs.co/">SDSLabs</a>.
-          It is a Python-based simulation where you can tweak the initial conditions and other parameters of an enviroment
+          It is a Python-based simulation where you can tweak the initial <br> conditions and other parameters of an enviroment
           and then prey-predator adapt to each other and try to survive for a long time (You are not playing GOD!).
           <br>
 
@@ -112,7 +110,7 @@
         <p>
           I made this project as part of <a href="https://syntax-error-2024.devfolio.co/">Syntax error </a>organised by
           <a href="https://sdslabs.co/">SDSLabs</a>.
-          <a href="https://devfolio.co/projects/window-capture-gui-scripts-9632">Syntax Error</a>.
+          <a href="https://devfolio.co/projects/window-capture-gui-scripts-9632">Syntax Error</a>.  
           <br>
           This project is probably the one I’m most proud of. It’s not the most complex one, but I created it all in one
           day from scratch, and everything worked. The only bummer is that the judges couldn’t run it. (wasn't a one click go) 
@@ -148,15 +146,17 @@
         <div>
           <h3>Contact Me.</h3>
         </div>
-        <form action="/#Projects" method="POST">
+        <form action="https://api.web3forms.com/submit" method="POST">
           <div class="Contact_page">
+          <input type="hidden" name="access_key" value="15e5a899-2557-4efa-aa44-4d104d7d91c4">
             <div>
               <input id="name" name="name" placeholder="Name/Alias" type="text">
-              <input placeholder="Website/Online presence" >
+              <input id="presence" name="presence" placeholder="Website/Online presence" >
             </div>
             <div>
               <textarea id="opinions" name="opinions" placeholder="Your Opinions. Also one copy will be sent out to our glowie friends " rows="4" cols="50"></textarea>
             </div>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <div>
               <button type="submit">Submit</button>
             </div>
