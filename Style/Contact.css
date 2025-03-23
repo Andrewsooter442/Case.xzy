@@ -56,12 +56,13 @@ textarea::placeholder {
   height: 3rem;
   font-size: 20px;
   border-radius: 1rem;
-  box-shadow: 0  0 20px 10px rgba(33, 220, 4, 1);
+  border: solid black 1px;
+  box-shadow: 0  0 20px 10px rgb(50, 53, 60);
   transition: 0.2s ease;
   background-color: #474a54;
 }
 
 .Contact button:hover{
   transform: scale(1.1,1.1);
-  box-shadow: 0  0 20px 20px rgba(33, 220, 4, 1);
+  box-shadow: 0  0 20px 10px rgb(71, 74, 84);
 }
