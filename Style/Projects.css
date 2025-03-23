@@ -11,12 +11,14 @@
   gap: 20px 0 20px 0;
   gap: 20px;
 }
+
 #Projects p{
   text-align: center;
 }
 #Project_rant{
   padding: 20px;
 }
+
 .inside_projects {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   padding: 0px;            
@@ -28,8 +30,18 @@
 .inside_projects:hover {
   background-color: #454956;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  
-  transform: scale(1.05,1.05) ;
+  transform: scale(1.05,1.05);
+
 }
+
+.inside_projects .Hidden{
+  opacity: 0; 
+  transition: 0.5s cubic-bezier(.57,.4,0,1.65);
+}
+.inside_projects:hover .Hidden{
+  opacity: 1; 
+}
+
 
 #About{
   display: flex;
@@ -74,7 +86,7 @@
  border-radius: 1rem;
  /* text-shadow: 0  0 10px 20px rgba(33, 220, 4, 1); */
  text-shadow: none;
- box-shadow: 0  10px 20px rgba(33, 220, 4, 1);
+ box-shadow: 0  5px 10px rgba(33, 220, 4, 0.4);
  z-index: 19;
  transition: 5s ease;
 
