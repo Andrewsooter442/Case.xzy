@@ -56,13 +56,13 @@ a {
   padding: 1px;
   color: rgb(185, 219, 208);
   text-decoration: none;
-  box-shadow: 0 5px 10px rgba(185, 219, 208,0.5);
+  text-shadow: 0 5px 10px rgba(185, 219, 208, 0.5);
 }
 a:hover{
   color: aqua;
   transform: scale(1.2);
   font-size: 28px;
-  box-shadow: 0 10px 20px rgba(167, 214, 199, 1);
+  text-shadow: 0 10px 20px rgba(167, 214, 199, 1);
 }
 
 @media (max-width: 500px){
