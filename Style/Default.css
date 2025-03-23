@@ -67,7 +67,14 @@ a:hover{
   font-size: 28px;
   text-shadow: 0 10px 20px rgba(167, 214, 199, 1);
 }
-@media (max-width: 700px){
+@media (max-width: 767px){
   .Contact{display: none;}
   
+}
+@media (max-width: 841px){
+  .Contact{display: none;}
+  /* .nav_links ul{
+    flex-direction: column;
+  }
+   */
 }

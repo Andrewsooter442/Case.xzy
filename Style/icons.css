@@ -13,7 +13,7 @@
     font-size: 2rem;                    
     color: inherit;                     
     text-decoration: none;              
-    transition: transform 0.7s cubic-bezier(.57,.4,0,1.65);
+    transition: transform 1s cubic-bezier(.57,.4,0,1.65);
     box-shadow: none; 
     text-shadow: none; 
   }
