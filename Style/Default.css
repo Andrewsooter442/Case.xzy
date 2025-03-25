@@ -7,7 +7,7 @@
   font-family: "Poiret One", sans-serif;
   font-style: normal;
   color: #edf0f1;
-  scroll-margin-top: 9rem;
+  scroll-margin-top: 16vh;
 }
 p{
   text-align: center;
@@ -73,5 +73,33 @@ a:hover{
 }
 @media (max-width: 841px){
   .Contact{display: none;}
+
 }
+
+@media (max-width: 911px){
+  *{
+  scroll-margin-top: 21vh;
+  }
+}
+@media (max-width: 540px){
+  *{
+  scroll-margin-top: 37vh;
+  }
+}
+
+@media (max-width: 426px){
+  *{
+  scroll-margin-top: 25vh;
+  }
+}
+@media (max-width: 375px){
+  *{
+  scroll-margin-top: 30vh;
+  }
+}
+
+
+
+
+
 
