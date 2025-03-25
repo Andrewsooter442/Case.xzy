@@ -101,7 +101,7 @@ a:hover,a:focus{
 
 @media (max-width: 375px){
   *{
-  scroll-margin-top: 34vh;
+  scroll-margin-top: 25vh;
   }
 }
 
@@ -110,7 +110,7 @@ a:hover,a:focus{
   scroll-margin-top: 14vh;
   }
 }
-@media (max-width: 412px) and (height: 915px){
+@media (width: 412px) and (height: 915px){
   *{
   scroll-margin-top: 21vh;
   }
