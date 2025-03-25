@@ -69,22 +69,7 @@ a:hover,a:focus{
 }
 
 
-@media (max-width: 853px) and (max-height: 1280px){
-  *{
-  scroll-margin-top: 12vh;
-  }
-}
 
-@media (max-width: 820px) and (max-height: 1180px){
-  *{
-  scroll-margin-top: 14vh;
-  }
-}
-@media (max-width: 412px) and (max-height: 915px){
-  *{
-  scroll-margin-top: 21vh;
-  }
-}
 
 
 
@@ -114,14 +99,30 @@ a:hover,a:focus{
   }
 }
 
-
-
-
-
-
-
 @media (max-width: 375px){
   *{
-  scroll-margin-top: 33vh;
+  scroll-margin-top: 34vh;
+  }
+}
+
+@media (max-width: 820px) and (height: 1180px){
+  *{
+  scroll-margin-top: 14vh;
+  }
+}
+@media (max-width: 412px) and (height: 915px){
+  *{
+  scroll-margin-top: 21vh;
+  }
+}
+@media (max-width: 853px) and (height: 1280px){
+  *{
+  scroll-margin-top: 12vh;
+  }
+}
+
+@media (width: 1024px) and (height: 1366px){
+  *{
+  scroll-margin-top: 10vh;
   }
 }
