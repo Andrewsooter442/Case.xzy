@@ -1,44 +1,172 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-.top_bar{
-  display: flex;
-  position: sticky;
-  top: 0; 
-  z-index: 1000000; 
-  justify-content: space-between;
-  align-items: center; 
-  align-content: space-evenly;
-  flex-wrap: wrap;
-  padding: 1rem 4rem 1rem 4rem;
+
+/* --- LAYOUT GRID --- */
+.app_container {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Fixed Sidebar | Fluid Content */
+    min-height: 100vh;
 }
 
-.top_bar > *{
-  flex: 1;
-  text-align: center;
+/* --- SIDEBAR STYLING --- */
+.sidebar {
+    /* Use the variable */
+    background-color: var(--sidebar-bg); 
+    
+    /* OPTIONAL: Add a subtle background image if you want */
+    /* background-image: url('/path-to-your-pattern.png'); */
+    /* background-size: cover; */
+    
+    border-right: 1px solid var(--border-color);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth toggle */
 }
 
-.nav_links ul{
-  list-style-type: none;
-  font-size: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.625rem;
+.sidebar_header {
+    display: flex;
+    justify-content: space-between; /* Pushes title left, toggle right */
+    align-items: center;
+    margin-bottom: 3rem; /* Space between header and nav */
+}
+.site_title h1 {
+    font-size: 1.5rem; /* Slightly smaller to fit button */
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    line-height: 1.2;
+    color: var(--text-color);
 }
 
-.icons{
-  list-style-type: none;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.625rem;
+.site_title {
+    text-decoration: none;
+    box-shadow: none; /* Remove default link styles */
+}
+.site_title:hover {
+    transform: none; /* Disable hover scale on title */
 }
 
-.Long_text{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0.625rem 5rem 10rem 5rem;
+/* Vertical Navigation */
+.sidebar_nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sidebar_nav a.nav_item {
+    font-size: 1.25rem;
+    color: #a0a0a0;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+    color: var(--secondary-text);
+}
+
+.sidebar_nav a.nav_item:hover {
+    color: var(--accent-color);
+    color: #c79f8b;
+    transform: translateX(10px); /* Slide right instead of scaling */
+    text-shadow: 0 0 10px rgba(166, 177, 177, 0.5);
+
+}
+
+/* Sidebar Footer (Icons) */
+.sidebar_footer {
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+.social_icons {
+    justify-content: flex-start; /* Align icons left */
+    flex-wrap: wrap;
+}
+
+.copyright {
+    margin-top: 1rem;
+    color: #555;
+    font-size: 0.8rem;
+}
+
+/* --- MAIN CONTENT STYLING --- */
+.main_content {
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
+}
+
+/* Utility to ensure content blocks define their own spacing */
+.Long_text {
+    padding: 4rem 5% 4rem 5%; /* Adjusted padding for sidebar layout */
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Fix for the Top Bar text alignment inheriting "Center" */
+.top_bar > * {
+    text-align: left;
+}
+
+/* --- RESPONSIVENESS --- */
+
+/* Tablet & Mobile: Switch to Vertical Stack */
+@media (max-width: 900px) {
+    .app_container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: relative;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #353842;
+        padding: 1.5rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .site_title h1 {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+    }
+
+    .sidebar_nav {
+        margin-left: auto; /* Push nav to right */
+    }
+
+    .sidebar_nav ul {
+        flex-direction: row;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .sidebar_footer {
+        display: none; /* Hide footer icons in header on mobile to save space */
+    }
+    
+    /* Show icons in footer or add logic to show elsewhere if needed */
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    .sidebar_nav {
+        margin-left: 0;
+    }
+    .site_title h1 {
+        text-align: center;
+    }
 }
