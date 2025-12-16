@@ -1,0 +1,56 @@
+baseURL = 'https://summer.xyz/'
+languageCode = 'en-us'
+title = 'ByteCase'
+
+# This section defines the Navigation Bar
+[menus]
+
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+
+   [[menus.main]]
+    name = 'Posts'
+    pageRef = '/posts'
+    weight = 20
+
+   [[menus.main]]
+    name = 'Projects'
+    pageRef = '/projects'
+    weight = 30
+
+
+  # [[menus.main]]
+  #   name = 'Papers'
+  #   pageRef = '/papers'
+  #   weight = 40
+  #
+  # [[menus.main]]
+  #   name = 'Contact'
+  #   pageRef = '/contact'
+  #   weight = 50
+
+
+
+  [[menus.main]]
+    name = 'Tags'
+    pageRef = '/tags'
+    weight = 60
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    noClasses = false  
+    style = "github"   
+  math = true

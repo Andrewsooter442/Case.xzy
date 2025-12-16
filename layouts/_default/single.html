@@ -1,0 +1,30 @@
+
+{{ define "main" }}
+<div class="Long_text">
+  <div class="post-container" style="max-width: 800px; margin: 0 auto; width: 100%;">
+    
+    <h2 style="text-align: left; padding-left: 0;">{{ .Title }}</h2>
+    
+<div style="margin-bottom: 2rem;">
+      <p style="text-align: left; font-size: 0.9rem; color: var(--secondary-text); margin-bottom: 0.5rem;">
+        {{ .Date.Format "Jan 2, 2006" }}
+      </p>
+
+      {{ with .Params.tags }}
+      <div class="tags-container">
+        {{ range . }}
+          <a href="{{ "tags/" | relURL }}{{ . | urlize }}" class="tag">#{{ . }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>   
+    <div class="content-body">
+      {{ .Content }}
+    </div>
+
+    <div style="margin-top: 4rem; text-align: left;">
+      <a href=".." style="font-size: 1.1rem;">← Go Back</a>
+    </div>
+  </div>
+</div>
+{{ end }}

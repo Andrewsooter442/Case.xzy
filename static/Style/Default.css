@@ -1,0 +1,247 @@
+/* Removed Poiret One import */
+
+:root {
+  /* --- New Font & Grid Variables --- */
+  --grid-base: 16px;
+  --line-height: 1.4;
+  --font-size-base: var(--grid-base);
+  --font-mono: "Maple Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --font-weight-normal: 400;
+  --font-weight-bold: 500;
+  --space-1: 1ch;
+  --space-2: 2ch;
+  --space-4: 4ch;
+  --space-8: 8ch;
+  --space-line: 1lh;
+  --space-line-2: 2lh;
+  --space-line-4: 4lh;
+
+  /* --- Existing Color Variables --- */
+  --bg-color: #f7f3e8; 
+  --bg-image: url('/images/light.png'); 
+  --sidebar-bg: #efeadd; 
+  
+  --text-color: #4a3b32; 
+  
+  --accent-color: #c45d3d; 
+  
+  --secondary-text: #8c7b70; 
+  
+  --card-bg: #fffbf2;
+  
+  --card-hover-bg: #e6e0d0; 
+  
+  --card-shadow: rgba(74, 59, 50, 0.08);
+  --border-color: #dcd6c8;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1f1c1a; 
+  --bg-image: url('/images/dark-pattern.png');
+  
+  --sidebar-bg: #2d2826; 
+  
+  --text-color: #e6dec8; 
+  
+  --accent-color: #e0af68; 
+  
+  --secondary-text: #9e958d; 
+  
+  --card-bg: #2d2826;
+  --card-hover-bg: #3e3835; 
+  
+  --card-shadow: rgba(0, 0, 0, 0.45);
+  --border-color: #4a423e;
+}
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  box-sizing: border-box; 
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 16vh; 
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden; 
+  background-color: var(--bg-color); 
+  
+  /* Updated Font Settings */
+  font-family: var(--font-mono); 
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight-normal);
+  font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Removed specific p font-size to allow inheritance of 16px base */
+p {
+  /* font-size: 1.5rem; */
+}
+
+h1 {
+  text-align: center; 
+  font-weight: var(--font-weight-bold);
+  padding: 1rem;
+}
+h2 {
+  text-align: center; 
+  font-size: 2.25rem;
+  font-weight: var(--font-weight-bold);
+  padding: 1rem;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  padding: 1rem;
+}
+hr {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 0;
+    border-top: 1px solid var(--accent-color);
+    opacity: 0.5;
+}
+
+a {
+  flex-shrink: 0;
+  transition: 0.05s ease;
+  padding: 0.063rem;
+  color: var(--accent-color); 
+  text-decoration: none;
+  display: inline-block; 
+}
+a:hover, a:focus {
+  transform: scale(1.009); 
+  text-decoration: underline;
+  text-shadow: 0 0 10px var(--card-shadow);
+}
+
+@media (max-width: 767px){
+  .Contact{ display: flex; } 
+}
+
+
+.post-list-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.post-item {
+  margin-bottom: 5rem; 
+  text-align: left;
+}
+
+.post-item h3 {
+    padding-left: 0; 
+}
+
+.post-title-link {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.1s ease;
+  display: inline-block;
+  box-shadow: none; 
+  text-shadow: none;
+}
+
+.post-title-link:hover {
+  color: var(--accent-color);
+  transform: scale(1.02); 
+}
+
+.post-date {
+  display: block;
+  color: var(--secondary-text);
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.post-summary {
+  text-align: left; 
+  line-height: 1.8; 
+  color: var(--text-color);
+  font-size: 1.15rem;
+  opacity: 0.9;
+}
+
+.post-divider {
+  margin-top: 3rem;
+  width: 20%; 
+  margin-left: 0; 
+  border-color: var(--border-color);
+  opacity: 0.3;
+}
+
+.content-body {
+    text-align: left;
+    line-height: 1.8; 
+    font-size: 1.1rem;
+    max-width: 100%;
+}
+
+.content-body p {
+    text-align: left;
+    margin-bottom: 1.5rem; 
+}
+
+.content-body ul, 
+.content-body ol {
+    text-align: left;
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-body li {
+    margin-bottom: 0.5rem;
+}
+
+.content-body h1, 
+.content-body h2, 
+.content-body h3, 
+.content-body h4 {
+    text-align: left;
+    padding-left: 0;
+    margin-top: 2rem;
+}
+
+.content-body blockquote {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1rem;
+    margin-left: 0;
+    font-style: italic;
+    color: var(--secondary-text);
+    text-align: left;
+}
+
+.content-body img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto; 
+    border-radius: 0.5rem;
+}

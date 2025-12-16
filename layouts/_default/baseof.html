@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  
+  <link rel="stylesheet" href="{{ "Style/Contact.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "Style/Default.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "Style/Projects.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "Style/style.css" | relURL }}"> 
+  <link rel="stylesheet" href="{{ "Style/icons.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "Style/syntax.css" | relURL }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+  {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+  {{ end }}
+
+  <script>
+    (function() {
+      const currentTheme = localStorage.getItem('theme');
+      const htmlElement = document.documentElement;
+      if (currentTheme) {
+        htmlElement.setAttribute('data-theme', currentTheme);
+      }
+      // Note: We update the icon later in the body because the icon doesn't exist yet
+    })();
+  </script>
+</head>
+
+<body>
+
+<div class="app_container">
+   <aside class="sidebar">
+        <div class="sidebar_header">
+            <a href="{{ .Site.BaseURL }}" class="site_title">
+                <h1>{{ .Site.Title }}</h1>
+            </a>
+            
+            <button id="theme-toggle" aria-label="Toggle Dark Mode" style="background:none; border:none; cursor:pointer; color: var(--text-color); font-size: 1.2rem; padding: 0.5rem;">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar_nav">
+            <ul>
+                {{ range .Site.Menus.main }}
+                <li>
+                    <a href="{{ .URL }}" class="nav_item">{{ .Name }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+
+        <div class="sidebar_footer">
+            <div class="icons social_icons">
+                <a href="https://www.youtube.com/@andrewsooter3745"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://github.com/Andrewsooter442"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:andrewsooter121@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/shashank-p906/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="copyright">
+                <small>&copy; {{ now.Format "2006" }}</small>
+            </div>
+        </div>
+    </aside>
+    <main class="main_content">
+        {{ block "main" . }}{{ end }}
+
+        <footer class="page_footer">
+            <div class="Long_text">
+              <!--
+                <div id="Contact" class="Contact">
+                    <div>
+                        <h3>Contact Me.</h3>
+                    </div>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <div class="Contact_page">
+                            <input type="hidden" name="access_key" value="YOUR-KEY-HERE">
+                            <div>
+                                <input id="name" name="name" placeholder="Name/Alias" type="text" required>
+                                <input id="presence" name="presence" placeholder="Website/Online presence" >
+                            </div>
+                            <div>
+                                <textarea id="opinions" name="opinions" placeholder="Your Opinions..." rows="4" cols="50" required></textarea>
+                            </div>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            -->
+        </footer>
+    </main>
+</div>
+
+<script>
+    // Logic to handle the toggle click and icon update (runs after DOM load)
+    const toggleButton = document.getElementById('theme-toggle');
+    const icon = toggleButton.querySelector('i');
+    const htmlElement = document.documentElement;
+
+    // Set initial icon based on what ran in <head>
+    if (htmlElement.getAttribute('data-theme') === 'dark') {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    }
+
+    toggleButton.addEventListener('click', () => {
+        let theme = htmlElement.getAttribute('data-theme');
+        let newTheme = (theme === 'dark') ? 'light' : 'dark';
+        
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Icon Toggle Logic
+        if (newTheme === 'dark') {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+    });
+</script>
+
+</body>
+</html>

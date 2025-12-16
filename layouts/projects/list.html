@@ -1,0 +1,37 @@
+{{ define "main" }}
+<div class="Long_text">
+  <div id="Projects">
+    <h2>Projects I have done so far.</h2>
+    <p id="Project_rant">
+      Here are a few of my projects that I feel good about.
+    </p>
+
+    <div class="card-list-container">
+      {{ range .Pages }}
+        <div class="inside_projects">
+          
+          <div class="card-header">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <br>
+            <small>{{ .Date.Format "Jan 2, 2006" }}</small>
+          </div>
+          
+          <p>
+            {{ .Summary }}
+          </p>
+
+          <div class="icons">
+            {{ with .Params.github_url }}
+              <a href="{{ . }}" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
+            {{ end }}
+            {{ with .Params.youtube_url }}
+              <a href="{{ . }}" title="Watch on YouTube"><i class="fa-brands fa-youtube"></i></a>
+            {{ end }}
+            <a href="{{ .RelPermalink }}" title="Read Project"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,92 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap'); */
+
+.Contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border: solid 1px var(--border-color); 
+  align-items: center;
+  background-color: var(--card-bg); 
+  box-shadow: 0 0.5rem 1rem var(--card-shadow);  
+  z-index: 1;
+}
+
+.Contact_page {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.Contact input {
+  border-radius: 0.313rem;
+  width: 100%;
+  min-width: 280px;
+  max-width: 20rem;
+  max-width: 100%;
+  font-family: "Poiret One", sans-serif;
+  text-align: left; 
+  padding-left: 1rem; 
+  font-size: 1rem;    
+  height: 3rem;
+  background-color: var(--bg-color);
+  border: solid 1px var(--text-color); 
+  color: var(--text-color);
+}
+
+.Contact textarea {
+  border-radius: 0.313rem;
+  font-family: "Poiret One", sans-serif;
+  text-align: left;    
+  padding: 1rem; 
+  font-size: 1rem; 
+  width: 100%;
+  max-width: 42rem;
+  max-width: 100%;
+  height: 6rem;
+  background-color: var(--bg-color);
+  border: solid 1px var(--text-color); 
+  color: var(--text-color);
+}
+
+.Contact input:focus, 
+.Contact textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.Contact input::placeholder,
+textarea::placeholder {
+  color: var(--text-color);
+  font-family: "Poiret One", sans-serif;
+  font-size: 1rem;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.Contact button {
+  width: 8rem;
+  height: 3rem;
+  font-size: 1.25rem;
+  border-radius: 1rem;
+  border: solid 1px var(--text-color);
+  box-shadow: 0 0 1.25rem 0.625rem var(--card-shadow);
+  transition: 0.2s ease;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  cursor: pointer; 
+}
+
+.opinions {
+  text-align: center;
+}
+
+.Contact button:hover {
+  transform: scale(1.05); 
+}

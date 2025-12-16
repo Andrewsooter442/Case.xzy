@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="Long_text">
+  <div id="About"> 
+    <h2>{{ .Title }}</h2>
+    
+    <div class="card-list-container">
+      
+      {{ range .Pages }}
+        <div class="inside_projects">
+          
+          <div class="card-header">
+            <h3>
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              <br>
+              <small>{{ .Date.Format "Jan 2, 2006" }}</small>
+            </h3>
+          </div>
+          
+          <p>
+            {{ .Summary }}
+          </p>
+          
+          <div class="icons">
+            <a href="{{ .RelPermalink }}" style="font-size: 1rem; display: flex; gap: 0.5rem; width: auto;">
+                Read More <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+      {{ end }}
+      
+    </div>
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="Long_text">
+  <h2>All Tags</h2>
+  
+  <div class="tags-container" style="margin-top: 2rem;">
+    {{ range .Data.Terms }}
+      <a href="{{ .Page.RelPermalink }}" class="tag" style="font-size: 1.2rem; padding: 0.5rem 1rem;">
+        #{{ .Page.Title }} 
+        <small>({{ .Count }})</small>
+      </a>
+    {{ end }}
+  </div>
+
+</div>
+{{ end }}
