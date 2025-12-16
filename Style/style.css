@@ -1,20 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
-/* --- LAYOUT GRID --- */
 .app_container {
     display: grid;
-    grid-template-columns: 280px 1fr; /* Fixed Sidebar | Fluid Content */
+    grid-template-columns: 280px 1fr; 
     min-height: 100vh;
 }
 
-/* --- SIDEBAR STYLING --- */
+
 .sidebar {
-    /* Use the variable */
+    
     background-color: var(--sidebar-bg); 
     
-    /* OPTIONAL: Add a subtle background image if you want */
-    /* background-image: url('/path-to-your-pattern.png'); */
-    /* background-size: cover; */
     
     border-right: 1px solid var(--border-color);
     padding: 2rem;
@@ -25,17 +21,17 @@
     top: 0;
     height: 100vh;
     overflow-y: auto;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth toggle */
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .sidebar_header {
     display: flex;
-    justify-content: space-between; /* Pushes title left, toggle right */
+    justify-content: space-between; 
     align-items: center;
-    margin-bottom: 3rem; /* Space between header and nav */
+    margin-bottom: 3rem; 
 }
 .site_title h1 {
-    font-size: 1.5rem; /* Slightly smaller to fit button */
+    font-size: 1.5rem; 
     text-align: left;
     padding: 0;
     margin: 0;
@@ -45,13 +41,12 @@
 
 .site_title {
     text-decoration: none;
-    box-shadow: none; /* Remove default link styles */
+    box-shadow: none; 
 }
 .site_title:hover {
-    transform: none; /* Disable hover scale on title */
+    transform: none; 
 }
 
-/* Vertical Navigation */
 .sidebar_nav ul {
     list-style: none;
     display: flex;
@@ -74,19 +69,19 @@
 .sidebar_nav a.nav_item:hover {
     color: var(--accent-color);
     color: #c79f8b;
-    transform: translateX(10px); /* Slide right instead of scaling */
+    transform: translateX(10px); 
     text-shadow: 0 0 10px rgba(166, 177, 177, 0.5);
 
 }
 
-/* Sidebar Footer (Icons) */
+
 .sidebar_footer {
     margin-top: auto;
     padding-top: 2rem;
 }
 
 .social_icons {
-    justify-content: flex-start; /* Align icons left */
+    justify-content: flex-start; 
     flex-wrap: wrap;
 }
 
@@ -96,29 +91,24 @@
     font-size: 0.8rem;
 }
 
-/* --- MAIN CONTENT STYLING --- */
 .main_content {
     background-color: var(--bg-color);
     transition: background-color 0.3s ease;
 }
 
-/* Utility to ensure content blocks define their own spacing */
 .Long_text {
-    padding: 4rem 5% 4rem 5%; /* Adjusted padding for sidebar layout */
+    padding: 4rem 5% 4rem 5%; 
     max-width: 1000px;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
 }
 
-/* Fix for the Top Bar text alignment inheriting "Center" */
 .top_bar > * {
     text-align: left;
 }
 
-/* --- RESPONSIVENESS --- */
 
-/* Tablet & Mobile: Switch to Vertical Stack */
 @media (max-width: 900px) {
     .app_container {
         grid-template-columns: 1fr;
@@ -141,7 +131,7 @@
     }
 
     .sidebar_nav {
-        margin-left: auto; /* Push nav to right */
+        margin-left: auto; 
     }
 
     .sidebar_nav ul {
@@ -151,10 +141,10 @@
     }
     
     .sidebar_footer {
-        display: none; /* Hide footer icons in header on mobile to save space */
+        display: none; 
     }
     
-    /* Show icons in footer or add logic to show elsewhere if needed */
+    
 }
 
 @media (max-width: 600px) {

@@ -1,18 +1,15 @@
-/* --- CODE BLOCK CONTAINER --- */
-/* This makes the box look nice (padding, rounded corners) */
 .chroma {
-    background-color: #f6f8fa; /* Light mode bg */
-    color: #24292e;            /* Light mode text */
+    background-color: #f6f8fa; 
+    color: #24292e;            
     padding: 1rem;
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
-    overflow-x: auto;          /* Scrollbar for long lines */
+    overflow-x: auto;          
     font-size: 0.95rem;
     line-height: 1.5;
     border: 1px solid var(--border-color);
 }
 
-/* Remove default margins from pre tags inside chroma */
 .chroma pre {
     margin: 0;
     padding: 0;

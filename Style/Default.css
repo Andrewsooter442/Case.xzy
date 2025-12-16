@@ -2,7 +2,7 @@
 
 :root {
   --bg-color: #f7f3e8; 
-  --bg-image: url('/images/light.png'); /* Ensure this image is transparent or warm-tinted */
+  --bg-image: url('/images/light.png'); 
   --sidebar-bg: #efeadd; 
   
   --text-color: #4a3b32; 
@@ -95,12 +95,11 @@ hr {
     opacity: 0.5;
 }
 
-/* Links */
 a {
   flex-shrink: 0;
   transition: 0.2s ease;
   padding: 0.063rem;
-  color: var(--accent-color); /* Use variable */
+  color: var(--accent-color); 
   text-decoration: none;
   display: inline-block; 
 }
@@ -109,11 +108,10 @@ a:hover, a:focus {
   text-shadow: 0 0 10px var(--card-shadow);
 }
 
-/* Specific overrides for media queries remain similar but cleaned up */
 @media (max-width: 767px){
-  .Contact{ display: flex; } /* Ensure contact is visible on mobile if desired */
+  .Contact{ display: flex; } 
 }
-/* --- POSTS LIST STYLING --- */
+
 
 .post-list-container {
   max-width: 800px;
@@ -128,31 +126,26 @@ a:hover, a:focus {
 }
 
 .post-item {
-  /* BREATHING ROOM: Increased spacing between posts */
   margin-bottom: 5rem; 
   text-align: left;
 }
 
 .post-item h3 {
-    padding-left: 0; /* Reset default padding */
+    padding-left: 0; 
 }
 
-/* THE GLOW EFFECT */
 .post-title-link {
   color: var(--text-color);
   text-decoration: none;
   transition: all 0.3s ease;
   display: inline-block;
-  /* Ensure it doesn't have the default link underline/color style if you don't want it */
   box-shadow: none; 
   text-shadow: none;
 }
 
 .post-title-link:hover {
   color: var(--accent-color);
-  /* This is the GLOW */
   text-shadow: 0 0 15px rgba(0, 255, 255, 0.6); 
-  /* Subtle movement */
   transform: translateX(10px) scale(1.02); 
 }
 
@@ -166,9 +159,7 @@ a:hover, a:focus {
 }
 
 .post-summary {
-  /* Overrides the default center alignment */
   text-align: left; 
-  /* BREATHING ROOM: More space between lines of text */
   line-height: 1.8; 
   color: var(--text-color);
   font-size: 1.15rem;
@@ -177,28 +168,24 @@ a:hover, a:focus {
 
 .post-divider {
   margin-top: 3rem;
-  width: 20%; /* Smaller, minimal divider */
-  margin-left: 0; /* Align divider to the left */
+  width: 20%; 
+  margin-left: 0; 
   border-color: var(--border-color);
   opacity: 0.3;
 }
-/* --- BLOG POST TYPOGRAPHY FIXES --- */
 
-/* Wrapper for the markdown content */
 .content-body {
     text-align: left;
-    line-height: 1.8; /* Makes reading easier */
+    line-height: 1.8; 
     font-size: 1.1rem;
     max-width: 100%;
 }
 
-/* Force Paragraphs to be Left Aligned */
 .content-body p {
     text-align: left;
-    margin-bottom: 1.5rem; /* Space between paragraphs */
+    margin-bottom: 1.5rem; 
 }
 
-/* Fix Lists (Bullets and Numbers) */
 .content-body ul, 
 .content-body ol {
     text-align: left;
@@ -210,7 +197,6 @@ a:hover, a:focus {
     margin-bottom: 0.5rem;
 }
 
-/* Fix Headings inside the post content */
 .content-body h1, 
 .content-body h2, 
 .content-body h3, 
@@ -220,7 +206,6 @@ a:hover, a:focus {
     margin-top: 2rem;
 }
 
-/* Fix Blockquotes */
 .content-body blockquote {
     border-left: 4px solid var(--accent-color);
     padding-left: 1rem;
@@ -230,11 +215,10 @@ a:hover, a:focus {
     text-align: left;
 }
 
-/* Images inside posts */
 .content-body img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 2rem auto; /* Center images, but keep text left */
+    margin: 2rem auto; 
     border-radius: 0.5rem;
 }
