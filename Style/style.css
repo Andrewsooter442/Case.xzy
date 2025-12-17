@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap'); */
 
 .app_container {
     display: grid;
@@ -59,7 +59,7 @@
     color: #a0a0a0;
     text-decoration: none;
     display: block;
-    transition: all 0.2s ease;
+    transition: all 0.05s ease;
     border-radius: 0;
     box-shadow: none;
     text-shadow: none;
@@ -68,9 +68,7 @@
 
 .sidebar_nav a.nav_item:hover {
     color: var(--accent-color);
-    color: #c79f8b;
-    transform: translateX(10px); 
-    text-shadow: 0 0 10px rgba(166, 177, 177, 0.5);
+    text-decoration: underline;
 
 }
 

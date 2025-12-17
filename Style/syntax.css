@@ -15,33 +15,31 @@
     padding: 0;
 }
 
-/* --- LIGHT MODE (Github Style) --- */
-.chroma .k { color: #d73a49; font-weight: bold; } /* Keyword */
-.chroma .kc { color: #d73a49; font-weight: bold; } /* Keyword Constant */
-.chroma .kd { color: #d73a49; font-weight: bold; } /* Keyword Declaration */
-.chroma .kn { color: #d73a49; font-weight: bold; } /* Keyword Namespace */
-.chroma .kp { color: #d73a49; font-weight: bold; } /* Keyword Pseudo */
-.chroma .kr { color: #d73a49; font-weight: bold; } /* Keyword Reserved */
-.chroma .kt { color: #d73a49; font-weight: bold; } /* Keyword Type */
-.chroma .n { color: #24292e; } /* Name */
-.chroma .nc { color: #6f42c1; font-weight: bold; } /* Name Class */
-.chroma .no { color: #005cc5; font-weight: bold; } /* Name Constant */
-.chroma .nf { color: #6f42c1; font-weight: bold; } /* Name Function */
-.chroma .nv { color: #24292e; } /* Name Variable */
-.chroma .l { color: #032f62; } /* Literal */
-.chroma .s { color: #032f62; } /* String */
-.chroma .s1 { color: #032f62; } /* String Single */
-.chroma .s2 { color: #032f62; } /* String Double */
-.chroma .c { color: #6a737d; font-style: italic; } /* Comment */
-.chroma .c1 { color: #6a737d; font-style: italic; } /* Comment Single */
-.chroma .cm { color: #6a737d; font-style: italic; } /* Comment Multiline */
-.chroma .o { color: #d73a49; font-weight: bold; } /* Operator */
-.chroma .ow { color: #d73a49; font-weight: bold; } /* Operator Word */
+.chroma .k { color: #d73a49; font-weight: bold; } 
+.chroma .kc { color: #d73a49; font-weight: bold; }
+.chroma .kd { color: #d73a49; font-weight: bold; } 
+.chroma .kn { color: #d73a49; font-weight: bold; } 
+.chroma .kp { color: #d73a49; font-weight: bold; } 
+.chroma .kr { color: #d73a49; font-weight: bold; }
+.chroma .kt { color: #d73a49; font-weight: bold; }
+.chroma .n { color: #24292e; } 
+.chroma .nc { color: #6f42c1; font-weight: bold; } 
+.chroma .no { color: #005cc5; font-weight: bold; } 
+.chroma .nf { color: #6f42c1; font-weight: bold; } 
+.chroma .nv { color: #24292e; } 
+.chroma .l { color: #032f62; } 
+.chroma .s { color: #032f62; }
+.chroma .s1 { color: #032f62; }
+.chroma .s2 { color: #032f62; } 
+.chroma .c { color: #6a737d; font-style: italic; }
+.chroma .c1 { color: #6a737d; font-style: italic; } 
+.chroma .cm { color: #6a737d; font-style: italic; }
+.chroma .o { color: #d73a49; font-weight: bold; }
+.chroma .ow { color: #d73a49; font-weight: bold; } 
 
-/* --- DARK MODE OVERRIDES (Dracula Style) --- */
 [data-theme="dark"] .chroma {
-    background-color: #282a36; /* Dark bg */
-    color: #f8f8f2;            /* Dark text */
+    background-color: #282a36; 
+    color: #f8f8f2;         
     border: 1px solid #44475a;
 }
 

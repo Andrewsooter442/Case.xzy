@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap'); */
 
 
 .card-list-container {
@@ -36,7 +36,6 @@
 }
 
 .inside_projects:hover {
-  transform: translateY(-3px);
   box-shadow: 0 0.5rem 0.5rem var(--card-shadow);
   border-color: var(--accent-color);
 }
@@ -59,7 +58,9 @@
 }
 
 .inside_projects h3 a:hover {
+  text-decoration: underline;
   color: var(--accent-color);
+  transform: none;
 }
 
 .inside_projects small {
@@ -93,11 +94,11 @@
 .inside_projects .icons a {
     font-size: 2rem;
     color: var(--secondary-text);
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition: color 0.05s ease, transform 0.05s ease;
 }
 
 .inside_projects .icons a:hover {
     color: var(--accent-color);
-    transition: transform 0.2s; 
-    transform: scale(1.2); 
+    transition: transform 0.05s; 
+    transform: scale(1.05); 
 }

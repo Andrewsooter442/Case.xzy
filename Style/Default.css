@@ -1,6 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+/* Removed Poiret One import */
 
 :root {
+  /* --- New Font & Grid Variables --- */
+  --grid-base: 16px;
+  --line-height: 1.4;
+  --font-size-base: var(--grid-base);
+  --font-mono: "Maple Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --font-weight-normal: 400;
+  --font-weight-bold: 500;
+  --space-1: 1ch;
+  --space-2: 2ch;
+  --space-4: 4ch;
+  --space-8: 8ch;
+  --space-line: 1lh;
+  --space-line-2: 2lh;
+  --space-line-4: 4lh;
+
+  /* --- Existing Color Variables --- */
   --bg-color: #f7f3e8; 
   --bg-image: url('/images/light.png'); 
   --sidebar-bg: #efeadd; 
@@ -57,7 +73,12 @@ body {
   min-height: 100vh;
   overflow-x: hidden; 
   background-color: var(--bg-color); 
-  font-family: "Poiret One", sans-serif; 
+  
+  /* Updated Font Settings */
+  font-family: var(--font-mono); 
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight-normal);
   font-style: normal;
 }
 
@@ -65,23 +86,25 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Removed specific p font-size to allow inheritance of 16px base */
 p {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
 }
+
 h1 {
   text-align: center; 
-  font-weight: 800;
+  font-weight: var(--font-weight-bold);
   padding: 1rem;
 }
 h2 {
   text-align: center; 
   font-size: 2.25rem;
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
   padding: 1rem;
 }
 h3 {
   font-size: 2rem;
-  font-weight: 800 ;
+  font-weight: var(--font-weight-bold);
   padding: 1rem;
 }
 hr {
@@ -97,14 +120,15 @@ hr {
 
 a {
   flex-shrink: 0;
-  transition: 0.2s ease;
+  transition: 0.05s ease;
   padding: 0.063rem;
   color: var(--accent-color); 
   text-decoration: none;
   display: inline-block; 
 }
 a:hover, a:focus {
-  transform: scale(1.02); 
+  transform: scale(1.009); 
+  text-decoration: underline;
   text-shadow: 0 0 10px var(--card-shadow);
 }
 
@@ -137,7 +161,7 @@ a:hover, a:focus {
 .post-title-link {
   color: var(--text-color);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
   display: inline-block;
   box-shadow: none; 
   text-shadow: none;
@@ -145,8 +169,7 @@ a:hover, a:focus {
 
 .post-title-link:hover {
   color: var(--accent-color);
-  text-shadow: 0 0 15px rgba(0, 255, 255, 0.6); 
-  transform: translateX(10px) scale(1.02); 
+  transform: scale(1.02); 
 }
 
 .post-date {
@@ -222,3 +245,17 @@ a:hover, a:focus {
     margin: 2rem auto; 
     border-radius: 0.5rem;
 }
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
