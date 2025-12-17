@@ -1,4 +1,4 @@
-baseURL = 'https://summer.xyz/'
+baseURL = 'https://bytecase.foo/'
 languageCode = 'en-us'
 title = 'ByteCase'
 
@@ -19,6 +19,12 @@ title = 'ByteCase'
     name = 'Projects'
     pageRef = '/projects'
     weight = 30
+
+   [[menus.main]]
+    name = 'Archives'
+    pageRef = '/archives'
+    weight = 40
+
 
 
   # [[menus.main]]
@@ -54,3 +60,11 @@ title = 'ByteCase'
     noClasses = false  
     style = "github"   
   math = true
+
+[services]
+  [services.rss]
+    limit = 30
+
+[markup.goldmark.renderer]
+  unsafe = true
+

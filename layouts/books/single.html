@@ -1,0 +1,41 @@
+{{ define "main" }}
+<div class="Long_text">
+  <div class="post-container" style="max-width: 800px; margin: 0 auto; width: 100%;">
+    
+    <h2 style="text-align: left; padding-left: 0;">{{ .Title }}</h2>
+
+    <div style="border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 2rem; border: 1px solid var(--border-color); background-color: var(--card-bg);">
+      <div class="book-stats-grid"> 
+        {{ with .Params.author }}
+        <div>
+          <span style="color: var(--secondary-text); font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">AUTHOR</span>
+          <div style="font-weight: bold; font-size: 1.1rem;">{{ . }}</div>
+        </div>
+        {{ end }}
+
+        {{ with .Params.rating }}
+        <div>
+          <span style="color: var(--secondary-text); font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">RATING</span>
+          <div style="color: var(--accent-color); font-weight: bold; font-size: 1.1rem;">{{ . }}/10</div>
+        </div>
+        {{ end }}
+
+        {{ if or .Params.started .Params.finished }}
+        <div>
+          <span style="color: var(--secondary-text); font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">STATUS</span>
+          <div>{{ .Params.status | humanize }}</div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="content-body">
+      {{ .Content }}
+    </div>
+
+    <div style="margin-top: 4rem; text-align: left;">
+      <a href="/books" style="font-size: 1.1rem;">← Back to Bookshelf</a>
+    </div>
+  </div>
+</div>
+{{ end }}

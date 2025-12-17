@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="Long_text" style="text-align: center; margin-top: 10vh;">
+  {{ with .Params.external_url }}
+    <meta http-equiv="refresh" content="0; url={{ . }}">
+    <script>window.location.href="{{ . }}";</script>
+    <h2>Redirecting...</h2>
+    <p>If you are not redirected, <a href="{{ . }}">click here to visit {{ $.Title }}</a>.</p>
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="Long_text">
+  <div id="Posts">
+    <h2>Posts.</h2>
+   <p id="Project_rant" style="font-size: 1.5rem;">
+  You can find all the posts either in <a href="/Archives">Archives</a> or by <a href="/tags">Tags</a>
+</p>
+    <div class="card-list-container">
+      {{ range .Pages }}
+        <div class="inside_projects">
+          
+          <div class="card-header">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <br>
+            <small>{{ .Date.Format "Jan 2, 2006" }}</small>
+          </div>
+          
+          <p>
+            {{ .Summary }}
+          </p>
+
+          <div class="icons">
+            <a href="{{ .RelPermalink }}" title="Read Post"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

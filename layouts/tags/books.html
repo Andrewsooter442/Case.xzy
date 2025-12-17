@@ -1,0 +1,40 @@
+{{ define "main" }}
+<div class="Long_text">
+  <div class="post-container" style="max-width: 800px; margin: 0 auto; width: 100%;">
+    
+    <h2 style="text-align: left; padding-left: 0;">{{ .Title }}</h2>
+    
+    <div class="content-body" style="margin-bottom: 2rem;">
+      {{ .Content }}
+    </div>
+
+    <ul style="list-style: none; padding: 0; font-family: var(--font-mono);">
+      {{ range .Pages }}
+        <li style="display: flex; align-items: baseline; margin-bottom: 0.5rem;">
+          
+          <span style="color: var(--accent-color); margin-right: 0.75rem;">*</span>
+          
+          <div style="white-space: nowrap;">
+            <a href="{{ .RelPermalink }}" style="font-weight: bold; text-decoration: none;">{{ .Title }}</a>
+            {{ if .Params.author }}
+              <span style="color: var(--secondary-text); font-size: 0.9em;"> / {{ .Params.author }}</span>
+            {{ end }}
+          </div>
+
+          <span style="flex-grow: 1; border-bottom: 1px dotted var(--secondary-text); margin: 0 10px; opacity: 0.5; position: relative; top: -4px;"></span>
+
+          <span style="font-size: 0.85rem; color: var(--secondary-text); white-space: nowrap;">
+            {{ if .Params.status }}
+              [{{ .Params.status | humanize }}]
+            {{ else }}
+              {{ .Date.Format "2006" }}
+            {{ end }}
+          </span>
+
+        </li>
+      {{ end }}
+    </ul>
+
+  </div>
+</div>
+{{ end }}

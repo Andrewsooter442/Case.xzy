@@ -1,0 +1,44 @@
+{{ define "main" }}
+<div class="Long_text">
+  <div class="post-container" style="max-width: 800px; margin: 0 auto; width: 100%;">
+    
+    <h2 style="text-align: center; padding-left: 0;">{{ .Title }}</h2>
+    
+    <div class="content-body" style="margin-bottom: 2rem;">
+      {{ .Content }}
+    </div>
+
+    <p>I never read book reviews of other people before reading any book. If you prefer to do the same don't click the book names.</p>
+    <br>
+    <br>
+
+    <ul class="responsive-list">
+      {{ range .Pages.ByDate.Reverse  }}
+        <li class="responsive-item">
+          
+          <span class="item-marker">*</span>
+          
+          <div class="item-content">
+            <a href="{{ .RelPermalink }}" class="custom-link">{{ .Title }}</a>
+            {{ if .Params.author }}
+              <span class="item-meta-text"> / {{ .Params.author }}</span>
+            {{ end }}
+          </div>
+
+          <span class="item-spacer"></span>
+
+          <span class="item-status">
+            {{ if .Params.status }}
+              [{{ .Params.status | humanize }}]
+            {{ else }}
+              {{ .Date.Format "2006" }}
+            {{ end }}
+          </span>
+
+        </li>
+      {{ end }}
+    </ul>
+
+  </div>
+</div>
+{{ end }}

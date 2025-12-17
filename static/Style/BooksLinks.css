@@ -1,0 +1,113 @@
+/* static/Style/BooksLinks.css */
+
+/* --- List Styling (Books & Links) --- */
+.responsive-list {
+  list-style: none;
+  padding: 0;
+  font-family: var(--font-mono);
+}
+
+.responsive-item {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+/* The asterisk/bullet */
+.item-marker {
+  color: var(--accent-color);
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* The Title and Author section */
+.item-content {
+  white-space: nowrap;
+}
+
+.custom-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.custom-link:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.item-meta-text {
+  color: var(--secondary-text);
+  font-size: 0.9em;
+}
+
+/* The dotted line spacer */
+.item-spacer {
+  flex-grow: 1;
+  border-bottom: 1px dotted var(--secondary-text);
+  margin: 0 10px;
+  opacity: 0.5;
+  position: relative;
+  top: -4px;
+  min-width: 20px; /* Prevents dots from vanishing completely until break */
+}
+
+/* The Date/Status section */
+.item-status {
+  font-size: 0.85rem;
+  color: var(--secondary-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 600px) {
+  .responsive-item {
+    flex-direction: column; /* Stack vertically */
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border-color); /* Add separator line since dots are gone */
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    gap: 0.25rem;
+  }
+
+  .item-content {
+    white-space: normal; /* Allow title to wrap to next line */
+    line-height: 1.4;
+  }
+
+  /* Hide the dotted leader line on mobile */
+  .item-spacer {
+    display: none;
+  }
+  
+  .item-status {
+    align-self: flex-end; /* Push date to the right, or remove to keep left */
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+  
+  .item-marker {
+    display: none; /* Optional: hide the asterisk on mobile to save space */
+  }
+}
+
+/* --- Book Single Page Stats Grid --- */
+.book-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  font-family: var(--font-mono);
+  text-align: center;
+}
+
+/* On very small phones, ensure 2 columns if possible, or stack cleanly */
+@media (max-width: 400px) {
+  .book-stats-grid {
+    grid-template-columns: 1fr 1fr; 
+    gap: 1rem;
+  }
+  /* Force single column for very long data if needed */
+  /* grid-template-columns: 1fr; */ 
+}
