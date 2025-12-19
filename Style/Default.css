@@ -127,7 +127,6 @@ a {
   display: inline-block; 
 }
 a:hover, a:focus {
-  transform: scale(1.009); 
   text-decoration: underline;
   text-shadow: 0 0 10px var(--card-shadow);
 }
